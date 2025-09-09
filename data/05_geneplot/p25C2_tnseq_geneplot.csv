@@ -1,0 +1,18 @@
+molecule,gene,start,end,strand,direction,Category
+Strain p25.C2,rfbB,1336,2436,forward,+,Resistance Trade-off
+Strain p25.C2,rfbD_1,2437,3342,forward,+,Mutual detriment
+Strain p25.C2,rmlA2_1,3339,4229,forward,+,Resistance Trade-off
+Strain p25.C2,wfgD,4275,5183,forward,+,Resistance Trade-off
+Strain p25.C2,rmlC_1,5833,6378,forward,+,Resistance Trade-off
+Strain p25.C2,tagG_2,6378,7205,forward,+,Resistance Trade-off
+Strain p25.C2,tagH_2,7195,8562,forward,+,Resistance Trade-off
+Strain p25.C2,epsE_4,8555,13381,forward,+,Resistance Trade-off
+Strain p25.C2,hypothetical,13437,15296,forward,+,Mutual detriment
+Strain p25.C2,fdtB_1,15314,16423,forward,+,Mutual detriment
+Strain p25.C2,csbB,16426,17370,forward,+,Mutual detriment
+Strain p25.C2,fdtC,17357,18307,forward,+,Mutual detriment
+Strain p25.C2,GtrA,18315,18716,forward,+,Mutual detriment
+Strain p25.C2,kfoC,20877,18826,reverse,-,Mutual detriment
+Strain p25.C2,hypothetical,22841,21435,reverse,-,Mutual detriment
+Strain p25.C2,spsA,24092,23115,reverse,-,Resistance Trade-off
+Strain p25.C2,pctC_5,26367,24310,reverse,-,Mutual detriment
