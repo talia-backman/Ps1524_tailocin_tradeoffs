@@ -30,5 +30,17 @@ Scripts are numbered to match the figure panels in the paper. Each script reads 
   Relate plant health proportions to bacterial load; per-ecotype linear models and correlation plot.
 
 - `09_oxidative_stress.R`  
-  Placeholder script for oxidative stress survival assays (in progress).
+  Quantify tolerance of WT and OPS mutants to oxidative stress (H₂O₂).  
+  Calculates per-well AUCs, normalizes by 0 mM controls, scales doses by WT MIC,  
+  and fits mixed-effects models with emmeans contrasts vs WT.  
+  Outputs: `WT_MIC_by_replicate.csv`, `emmeans_contrasts_vsWT_scaledMIC.csv`, and `09_oxidative_stress.png`.
 
+- `10_aggregation.R`  
+  Quantify strain-level aggregation phenotypes (R1–R3).  
+  Generates stacked bar plots of phenotype proportions per strain, performs χ² test across strains,  
+  and Fisher’s exact tests vs WT with FDR correction.  
+  Outputs: `10_aggregation_stats.csv` and `10_aggregation.png`.
+
+- `11_qPCR.R` *(to be added)*  
+  Planned analysis of differential expression of Arabidopsis immune marker genes following infection with WT and O-antigen mutants.  
+  Will include normalization to reference genes and ΔΔCt-based fold-change comparisons between treatments.

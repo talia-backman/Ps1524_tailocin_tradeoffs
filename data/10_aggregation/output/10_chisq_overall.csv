@@ -1,0 +1,2 @@
+method,statistic,df,p_value,n_strains,n_total
+Pearson's Chi-squared test,241.5126551603223,7,1.7717440989808925e-48,8,272

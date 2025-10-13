@@ -41,9 +41,12 @@ length(unique(dat$X)) # sanity check
 # color phylogeny tip labels
 tree_data <- dat %>% select(X, HTF_length) %>%
   mutate(HTF_length = as.factor(HTF_length))
-# color palette for HTF_length
-tree_palette <- brewer.pal(n = length(unique(tree_data$HTF_length)), name = "Set1")
-
+# Define custom colors for haplotypes
+tree_palette <- c(
+  "1830" = "#e8b9d8",  # light pink
+  "1383" = "#4a76b7",  # blue
+  "1803" = "#8c0027",  # dark red
+  "1245" = "#e6b625")   # mustard yellow
 # make a copy of the data for heatmap, keep dat (with HTF_length) for tip colors
 dat_heat <- dat
 rownames(dat_heat) <- dat_heat[,1]
@@ -62,7 +65,7 @@ dat_matrix <- dat_matrix[, correct_order]
 # Create the base tree plot with colored tip labels
 p <- ggtree(tree) %<+% dat + 
   geom_tiplab(aes(color = as.factor(HTF_length)), size = 2) +  
-  scale_color_brewer(palette = "Set1", name = "HTF Length (Tester)")
+  scale_color_manual(values = tree_palette, name = "HTF Length (Tester)")
 p
 # Add heatmap with colored column annotations
 p3 <- gheatmap(p, dat_matrix, colnames = TRUE, legend_title = "Results", 

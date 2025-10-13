@@ -1,0 +1,9 @@
+pcr.plate,1,2,3,4,5,6,7,8,9,10,11,12
+A,WT + 5,spsA + 4,tagH + 5,WT + 0,spsA + 3,epsE + 0,tagG + 10,wfgD + 3,wfgD + 6,WT + 3,WT + 3,
+B,rmlC + 0,wfgD + 4,rmlC + 4,spsA + 5,tagH + 10,WT + 4,tagH + 0,spsA + 3,rmlC + 10,tagH + 5,tagH + 3,
+C,epsE + 0,tagG + 10,wfgD + 10,wfgD + 5,tagG + 5,epsE + 6,plainLB,spsA + 4,tagG + 6,rmlC + 3,WT + 6,
+D,tagG + 0,epsE + 5,WT + 0,epsE + 6,tagH + 4,tagH + 6,epsE + 3,WT + 4,wfgD + 4,spsA + 10,tagH + 10,
+E,rmlC + 10,plainLB,wfgD + 3,rmlC + 3,WT + 10,rmlC + 5,tagG + 6,rmlC + 5,tagH + 6,tagG + 0,spsA + 6,
+F,rmlC + 6,tagG + 3,WT + 6,epsE + 3,tagG + 4,tagG + 3,wfgD + 5,wfgD + 0,rmlC + 0,epsE + 10,spsA + 5,
+G,spsA + 10,epsE + 10,epsE + 4,spsA + 0,spsA + 6,epsE + 4,tagH + 3,tagH + 0,wfgD + 6,rmlC + 6,WT + 5,
+H,wfgD + 0,tagG + 5,wfgD + 10,tagH + 4,rmlC + 4,WT + 10,epsE + 5,WT + 5,tagG + 4,spsA + 0,rmlC + 0,

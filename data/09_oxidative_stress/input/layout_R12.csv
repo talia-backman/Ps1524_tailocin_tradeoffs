@@ -1,0 +1,9 @@
+pcr.plate,1,2,3,4,5,6,7,8,9,10,11,12
+A,spsA + 0.3,rmlC + 0.5,rmlC + 5,spsA + 0,WT + 0,tagG + 1,tagG + 5,tagG + 0.1,spsA + 0.1,spsA + 1,WT + 1,spsA + 1
+B,spsA + 5,spsA + 0.5,rmlC + 0,WT + 5,spsA + 1,tagG + 1,WT + 0.3,rmlC + 0,rmlC + 0.1,tagG + 5,WT + 0.5,spsA + 0.3
+C,tagG + 0.5,spsA + 0.1,tagG + 0.3,WT + 1,tagG + 0.1,tagG + 0.5,rmlC + 1,rmlC + 0.3,tagG + 0.3,tagG + 0.1,spsA + 0.1,tagG + 0.3
+D,WT + 0,WT + 0.5,tagG + 0.1,rmlC + 0.5,WT + 0.5,spsA + 0,spsA + 0.1,rmlC + 0.3,tagG + 0.5,tagG + 1,WT + 1,rmlC + 0.1
+E,spsA + 5,plainLB,spsA + 0.5,rmlC + 5,rmlC + 0,rmlC + 1,rmlC + 5,tagG + 5,spsA + 0.5,WT + 5,rmlC + 1,rmlC + 0.1
+F,rmlC + 0.1,spsA + 0,tagG + 0.3,rmlC + 0.3,rmlC + 1,spsA + 0.3,WT + 5,spsA + 0,rmlC + 0,rmlC + 0.5,rmlC + 0.3,spsA + 1
+G,WT + 0.1,WT + 0.1,spsA + 0.3,spsA + 5,WT + 1,tagG + 1,WT + 0.1,WT + 0.5,rmlC + 5,spsA + 0.5,WT + 0.1,tagG + 0
+H,spsA + 0.3,tagG + 0,WT + 0.3,tagG + 0.5,tagG + 0,tagG + 0,WT + 5,WT + 0.3,WT + 0.3,WT + 0,rmlC + 0.5,WT + 0

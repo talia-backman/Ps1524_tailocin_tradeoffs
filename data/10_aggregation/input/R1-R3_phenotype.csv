@@ -1,0 +1,273 @@
+well,strain,phenotype,rep
+AX1,p25C2,no aggregation,1
+AX2,∆epsE,aggregation,1
+AX3,p25C2,no aggregation,1
+AX4,∆epsE,aggregation,1
+AX5,plainLB,clear,1
+AX6,p25C2,no aggregation,1
+AX7,∆tagG,aggregation,1
+AX8,plainLB,clear,1
+AX9,∆wfgD,aggregation,1
+AX10,∆tagH,aggregation,1
+AX11,∆spsA,aggregation,1
+BX1,∆rmlC,no aggregation,1
+BX2,∆tagG,aggregation,1
+BX3,plainLB,clear,1
+BX4,∆tagH,aggregation,1
+BX5,∆tagH,aggregation,1
+BX6,plainLB,clear,1
+BX7,plainLB,clear,1
+BX8,plainLB,clear,1
+BX9,∆spsA,aggregation,1
+BX10,plainLB,clear,1
+CX1,p25C2,no aggregation,1
+CX2,∆tagG,aggregation,1
+CX3,∆epsE,aggregation,1
+CX4,∆wfgD,aggregation,1
+CX5,∆rmlC,no aggregation,1
+CX6,∆rmlC,no aggregation,1
+CX7,∆tagH,aggregation,1
+CX8,∆wfgD,aggregation,1
+CX9,p25C2,no aggregation,1
+CX10,∆epsE,aggregation,1
+DX1,∆tagH,aggregation,1
+DX2,∆rmlC,no aggregation,1
+DX3,∆spsA,aggregation,1
+DX4,∆tagH,aggregation,1
+DX5,∆tagG,aggregation,1
+DX6,∆rmlC,no aggregation,1
+DX7,∆tagG,aggregation,1
+DX8,∆wfgD,aggregation,1
+DX9,plainLB,clear,1
+DX10,p25C2,no aggregation,1
+EX1,∆rmlC,no aggregation,1
+EX2,∆epsE,aggregation,1
+EX3,∆spsA,aggregation,1
+EX4,p25C2,no aggregation,1
+EX5,∆spsA,aggregation,1
+EX6,∆tagH,aggregation,1
+EX7,∆epsE,aggregation,1
+EX8,∆wfgD,aggregation,1
+EX10,∆tagH,aggregation,1
+FX1,∆wfgD,aggregation,1
+FX2,∆tagG,aggregation,1
+FX3,∆wfgD,aggregation,1
+FX4,plainLB,clear,1
+FX5,∆spsA,aggregation,1
+FX6,∆wfgD,aggregation,1
+FX7,∆rmlC,no aggregation,1
+FX9,∆spsA,aggregation,1
+FX10,∆epsE,aggregation,1
+FX11,∆tagH,aggregation,1
+GX1,∆epsE,aggregation,1
+GX2,plainLB,clear,1
+GX3,∆rmlC,no aggregation,1
+GX4,∆wfgD,aggregation,1
+GX5,∆rmlC,no aggregation,1
+GX6,∆epsE,aggregation,1
+GX7,∆tagH,aggregation,1
+GX8,∆spsA,aggregation,1
+GX9,p25C2,no aggregation,1
+HX1,∆wfgD,aggregation,1
+HX2,∆epsE,aggregation,1
+HX3,∆tagG,aggregation,1
+HX4,∆spsA,aggregation,1
+HX5,p25C2,no aggregation,1
+HX6,∆rmlC,no aggregation,1
+HX7,∆spsA,aggregation,1
+HX8,∆tagG,aggregation,1
+HX9,∆tagG,aggregation,1
+HX10,∆tagG,aggregation,1
+HX11,p25C2,no aggregation,1
+AX1,∆rmlC,no aggregation,2
+AX2,∆epsE,aggregation,2
+AX3,∆tagG,aggregation,2
+AX4,p25C2,no aggregation,2
+AX5,plainLB,clear,2
+AX6,∆epsE,aggregation,2
+AX7,∆rmlC,no aggregation,2
+AX8,∆tagG,aggregation,2
+AX9,∆tagH,aggregation,2
+AX10,∆wfgD,aggregation,2
+AX11,p25C2,no aggregation,2
+AX12,∆tagG,aggregation,2
+BX1,∆tagG,aggregation,2
+BX2,∆tagH,aggregation,2
+BX3,∆wfgD,aggregation,2
+BX4,plainLB,clear,2
+BX5,plainLB,clear,2
+BX6,∆spsA,aggregation,2
+BX7,∆spsA,aggregation,2
+BX8,∆wfgD,aggregation,2
+BX9,∆wfgD,aggregation,2
+BX10,∆rmlC,no aggregation,2
+BX11,∆epsE,aggregation,2
+BX12,∆spsA,no aggregation,2
+CX1,plainLB,clear,2
+CX2,plainLB,clear,2
+CX3,∆spsA,aggregation,2
+CX4,plainLB,clear,2
+CX5,∆epsE,aggregation,2
+CX6,plainLB,clear,2
+CX7,∆tagG,aggregation,2
+CX8,∆tagH,aggregation,2
+CX9,∆tagH,aggregation,2
+CX10,∆tagH,aggregation,2
+CX11,plainLB,clear,2
+CX12,∆rmlC,no aggregation,2
+DX1,∆spsA,aggregation,2
+DX2,∆rmlC,no aggregation,2
+DX3,p25C2,no aggregation,2
+DX4,∆epsE,aggregation,2
+DX5,∆spsA,aggregation,2
+DX6,∆wfgD,aggregation,2
+DX7,plainLB,clear,2
+DX8,∆tagH,aggregation,2
+DX9,∆tagG,aggregation,2
+DX10,p25C2,no aggregation,2
+DX11,plainLB,clear,2
+DX12,∆tagG,aggregation,2
+EX1,p25C2,no aggregation,2
+EX2,p25C2,no aggregation,2
+EX3,p25C2,no aggregation,2
+EX4,∆rmlC,no aggregation,2
+EX5,∆tagG,aggregation,2
+EX6,p25C2,no aggregation,2
+EX7,∆spsA,aggregation,2
+EX8,∆wfgD,aggregation,2
+EX9,∆tagH,aggregation,2
+EX10,∆spsA,aggregation,2
+EX11,∆tagG,aggregation,2
+EX12,plainLB,clear,2
+FX1,∆wfgD,no aggregation,2
+FX2,∆rmlC,no aggregation,2
+FX3,∆tagH,aggregation,2
+FX4,∆epsE,aggregation,2
+FX5,∆epsE,aggregation,2
+FX6,∆rmlC,no aggregation,2
+FX7,∆rmlC,no aggregation,2
+FX8,∆tagH,no aggregation,2
+FX9,∆wfgD,aggregation,2
+FX10,∆wfgD,aggregation,2
+FX11,∆spsA,aggregation,2
+FX12,∆spsA,aggregation,2
+GX1,∆rmlC,no aggregation,2
+GX2,plainLB,clear,2
+GX3,∆epsE,aggregation,2
+GX4,plainLB,clear,2
+GX5,∆spsA,aggregation,2
+GX6,plainLB,clear,2
+GX7,∆tagG,aggregation,2
+GX8,p25C2,no aggregation,2
+GX9,plainLB,clear,2
+GX10,∆tagG,aggregation,2
+GX11,∆epsE,aggregation,2
+GX12,p25C2,no aggregation,2
+HX1,plainLB,clear,2
+HX2,p25C2,no aggregation,2
+HX3,∆wfgD,aggregation,2
+HX4,plainLB,clear,2
+HX5,plainLB,clear,2
+HX6,plainLB,clear,2
+HX7,∆tagH,aggregation,2
+HX8,∆rmlC,no aggregation,2
+HX9,plainLB,clear,2
+HX10,∆epsE,aggregation,2
+HX11,plainLB,clear,2
+HX12,∆wfgD,aggregation,2
+AX1,∆epsE,aggregation,3
+AX2,plainLB,clear,3
+AX3,∆tagH,aggregation,3
+AX4,∆rmlC,no aggregation,3
+AX5,∆wfgD,aggregation,3
+AX6,plainLB,aggregation,3
+AX7,∆tagG,aggregation,3
+AX8,p25C2,no aggregation,3
+AX9,∆tagH,aggregation,3
+AX10,∆rmlC,no aggregation,3
+AX11,∆epsE,aggregation,3
+AX12,plainLB,clear,3
+BX1,∆rmlC,no aggregation,3
+BX2,∆rmlC,no aggregation,3
+BX3,∆tagG,aggregation,3
+BX4,∆spsA,aggregation,3
+BX5,∆tagG,aggregation,3
+BX6,plainLB,aggregation,3
+BX7,∆spsA,aggregation,3
+BX8,∆tagG,aggregation,3
+BX9,p25C2,no aggregation,3
+BX10,plainLB,clear,3
+BX11,p25C2,no aggregation,3
+BX12,∆wfgD,aggregation,3
+CX1,∆epsE,aggregation,3
+CX2,plainLB,clear,3
+CX3,∆tagG,aggregation,3
+CX4,∆epsE,aggregation,3
+CX5,plainLB,clear,3
+CX6,∆tagH,aggregation,3
+CX7,plainLB,clear,3
+CX8,∆wfgD,aggregation,3
+CX9,∆wfgD,aggregation,3
+CX10,plainLB,clear,3
+CX11,plainLB,clear,3
+CX12,∆epsE,aggregation,3
+DX1,∆spsA,aggregation,3
+DX2,∆tagH,aggregation,3
+DX3,p25C2,no aggregation,3
+DX4,∆rmlC,no aggregation,3
+DX5,∆tagH,aggregation,3
+DX6,∆wfgD,aggregation,3
+DX7,p25C2,no aggregation,3
+DX8,∆rmlC,no aggregation,3
+DX9,plainLB,clear,3
+DX10,∆epsE,aggregation,3
+DX11,∆rmlC,no aggregation,3
+DX12,∆rmlC,no aggregation,3
+EX1,p25C2,clear,3
+EX2,∆tagG,aggregation,3
+EX3,∆spsA,aggregation,3
+EX4,p25C2,no aggregation,3
+EX5,∆spsA,aggregation,3
+EX6,p25C2,no aggregation,3
+EX7,∆tagH,aggregation,3
+EX8,∆tagH,aggregation,3
+EX9,∆spsA,aggregation,3
+EX10,∆epsE,aggregation,3
+EX11,plainLB,aggregation,3
+EX12,∆epsE,aggregation,3
+FX1,plainLB,clear,3
+FX2,∆spsA,aggregation,3
+FX3,plainLB,clear,3
+FX4,plainLB,clear,3
+FX5,p25C2,no aggregation,3
+FX6,∆rmlC,no aggregation,3
+FX7,∆wfgD,aggregation,3
+FX8,plainLB,clear,3
+FX9,∆tagG,aggregation,3
+FX10,∆wfgD,aggregation,3
+FX11,∆tagH,aggregation,3
+FX12,∆spsA,aggregation,3
+GX1,plainLB,clear,3
+GX2,∆wfgD,aggregation,3
+GX3,∆rmlC,no aggregation,3
+GX4,∆tagH,aggregation,3
+GX5,∆tagG,aggregation,3
+GX6,∆epsE,aggregation,3
+GX7,p25C2,no aggregation,3
+GX8,plainLB,aggregation,3
+GX9,∆tagG,aggregation,3
+GX10,plainLB,clear,3
+GX11,∆epsE,aggregation,3
+GX12,p25C2,no aggregation,3
+HX1,∆epsE,aggregation,3
+HX2,∆wfgD,aggregation,3
+HX3,plainLB,clear,3
+HX4,∆spsA,aggregation,3
+HX5,∆epsE,aggregation,3
+HX6,∆wfgD,aggregation,3
+HX7,∆tagH,aggregation,3
+HX8,∆tagG,aggregation,3
+HX9,∆spsA,aggregation,3
+HX10,∆rmlC,no aggregation,3
+HX11,∆spsA,aggregation,3
+HX12,plainLB,aggregation,3

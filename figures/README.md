@@ -29,6 +29,13 @@ Each file corresponds to a panel or subpanel in the manuscript. File names are n
 - `08_disease_vs_load.pdf`  
   Correlation between bacterial load (luminescence) and plant health (proportion healthy).
 
-- `09_oxidative_stress.pdf` *(placeholder)*  
-  To be generated once oxidative stress assays are complete.
+- `09_oxidative_stress.pdf`  
+  Growth responses of WT and OPS mutants across H₂O₂ gradients.  
+  Includes scaled-dose AUC profiles and mixed-model estimated marginal means (Fig. SX).
 
+- `10_aggregation.pdf`  
+  Proportion of wells exhibiting aggregation across strains.  
+  All OPS mutants except ∆rmlC show strong aggregation, whereas WT and ∆rmlC do not (Fig. SX).
+
+- `11_qPCR.pdf` *(placeholder)*  
+  Planned figure showing differential expression of Arabidopsis immune marker genes following infection with WT vs O-antigen mutants.

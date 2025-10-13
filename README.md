@@ -56,8 +56,22 @@ Each analysis is organized by figure panel, numbered according to the manuscript
    - *Figure*: `figures/08_disease_vs_load.pdf`
 
 9. **09_oxidative_stress**  
-   - *Script exists*, but experiments not yet complete (Fig. 4X).  
-   - Placeholder for oxidative stress survival assays.
+   - *Data*: growth curves of WT and OPS mutants across H2O2 concentrations (Fig. SX).  
+   - *Script*: `scripts/09_oxidative_stress.R`  
+   - *Figure*: `figures/09_oxidative_stress.png`  
+   - *Outputs*: per-replicate WT MICs (`WT_MIC_by_replicate.csv`) and strain contrasts (`emmeans_contrasts_vsWT_scaledMIC.csv`).
+
+10. **10_aggregation**  
+   - *Data*: aggregation phenotype scoring from static cultures (R1–R3, Fig. SX).  
+   - *Script*: `scripts/10_aggregation.R`  
+   - *Figure*: `figures/10_aggregation.png`  
+   - *Outputs*: χ² and pairwise Fisher’s exact test results (`10_aggregation_stats.csv`).
+
+11. **11_qPCR**  
+   - *Data*: expression levels of immune marker genes in Arabidopsis following infection with WT and O-antigen mutants.  
+   - *Script*: `scripts/11_qPCR.R` *(to be added)*  
+   - *Figure*: `figures/11_qPCR.pdf` *(to be generated)*  
+   - *Goal*: test whether O-antigen mutants elicit differential host immune responses compared to WT.
 
 ## Requirements
 
