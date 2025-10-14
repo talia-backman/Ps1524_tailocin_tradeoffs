@@ -20,7 +20,7 @@ library(gggenes)
 library(viridis)
 
 # make color palette 
-c25 <- c("black","#73D055FF")
+c25 <- c("black","grey70","#73D055FF")
 
 # read gene plot data (a csv file with the following headers:
 # molecule gene start end strand direction)
@@ -43,4 +43,4 @@ p <- ggplot(dat, aes(xmin = start, xmax = end, y = molecule, fill = Category)) +
 p
 
 # save plot
-ggsave("./figures/05_geneplot.pdf", p, width = 8, height = 6)
+ggsave("./figures/05_geneplot.png", p, width = 8, height = 6)

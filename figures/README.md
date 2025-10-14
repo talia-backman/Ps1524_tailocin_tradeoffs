@@ -6,36 +6,34 @@ Each file corresponds to a panel or subpanel in the manuscript. File names are n
 ## Contents
 
 - `01_tailocin_killing_matrix.pdf`  
-  Killing matrix heatmap with phylogenetic tree and HTF-length annotations.
+  Killing matrix heatmap with phylogenetic tree and HTF-length annotations (Fig. 2A).
 
 - `02_HTF_OBC_sensitivity_summary.pdf`  
-  Sensitivity/resistance proportions summarized by OBC presence/absence.
+  Sensitivity/resistance proportions summarized by OBC presence/absence (Fig. 2B).
 
 - `03_plant_health_OBC.pdf`  
-  Green pixel quantification (plant health) compared between OBC-present and OBC-absent strains.
+  Green pixel quantification (plant health) compared between OBC-present and OBC-absent strains (Fig. 2C).
 
 - `04_tnseq_scatter.pdf`  
-  Scatterplot of TnSeq-derived plant fitness phenotypes.
+  Scatterplot of TnSeq-derived plant fitness phenotypes (Fig. 3B).
 
 - `05_geneplot.pdf`  
-  Gene map of the focal OBC cluster, colored by TnSeq results.
+  Gene map of the focal OBC cluster, colored by TnSeq results (Fig.3C).
 
 - `06_plant_infections_luciferase.pdf`  
-  Fold-change in bacterial luminescence at 7 dpi across strains and ecotypes.
+  Fold-change in bacterial luminescence at 7 dpi across strains and ecotypes (Fig. 4C).
 
 - `07_plant_disease.pdf`  
-  Stacked bar plots of plant outcomes (healthy vs diseased/dead) per strain and ecotype.
+  Stacked bar plots of plant outcomes (healthy vs diseased/dead) per strain and ecotype (Fig. 4D).
 
 - `08_disease_vs_load.pdf`  
-  Correlation between bacterial load (luminescence) and plant health (proportion healthy).
+  Correlation between bacterial load (luminescence) and plant health (proportion healthy) (Fig. 4E).
 
 - `09_oxidative_stress.pdf`  
-  Growth responses of WT and OPS mutants across H₂O₂ gradients.  
-  Includes scaled-dose AUC profiles and mixed-model estimated marginal means (Fig. SX).
+  Growth responses of WT and OPS mutants across H2O2 gradients (Fig. SX).
 
 - `10_aggregation.pdf`  
-  Proportion of wells exhibiting aggregation across strains.  
-  All OPS mutants except ∆rmlC show strong aggregation, whereas WT and ∆rmlC do not (Fig. SX).
+  Proportion of wells exhibiting aggregation across strains (Fig. SX).
 
 - `11_qPCR.pdf` *(placeholder)*  
-  Planned figure showing differential expression of Arabidopsis immune marker genes following infection with WT vs O-antigen mutants.
+  Planned figure showing differential expression of Arabidopsis immune marker genes following infection with WT vs O-antigen mutants (Fig. SX).

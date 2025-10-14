@@ -16,42 +16,48 @@ This repository contains data, analysis scripts, and figures for the manuscript
 Each analysis is organized by figure panel, numbered according to the manuscript:
 
 1. **01_tailocin_killing_matrix**  
-   - *Data*: killing matrix assays and tree (Fig. 1A).  
+   - *Data*: killing matrix assays and tree (Fig. 2A).  
    - *Script*: `scripts/01_tailocin_killing_matrix.R`  
    - *Figure*: `figures/01_tailocin_killing_matrix.pdf`
 
 2. **02_HTF_OBC_sensitivity_summary**  
-   - *Data*: strain haplotypes and sensitivity assays (Fig. 1B).  
+   - *Data*: strain haplotypes and sensitivity assays (Fig. 2B).  
    - *Script*: `scripts/02_HTF_OBC_sensitivity_summary.R`  
    - *Figure*: `figures/02_HTF_OBC_sensitivity_summary.pdf`
 
 3. **03_plant_health_OBC**  
-   - *Data*: green pixel quantification and OBC annotations (Fig. 1C).  
+   - *Data*: green pixel quantification and OBC annotations (Fig. 2C).  
    - *Script*: `scripts/03_plant_health_OBC.R`  
    - *Figure*: `figures/03_plant_health_OBC.pdf`
 
-4. **04_tnseq_scatter**  
-   - *Data*: plant vs tailocin fitness from parallel TnSeq (Fig. 2B).  
+4. **04_tnseq_plant**  
+   - *Data*: raw in planta TnSeq read counts from Col-0 and Eyach ecotypes, ortholog mappings, and tailocin fitness data.  
+   - *Script*: `scripts/04_tnseq_plant.R`  
+   - *Output*: `data/04_tnseq_scatter/output/merged_tnseq.csv`  
+   - *Purpose*: perform DESeq2 analysis of host-associated fitness, cross-map orthologs between p25C2 and DC3000, and merge with tailocin TnSeq results for downstream trade-off analyses.
+
+   **04_tnseq_scatter**  
+   - *Data*: plant vs tailocin fitness from parallel TnSeq (Fig. 3B).  
    - *Script*: `scripts/04_tnseq_scatter.R`  
    - *Figure*: `figures/04_tnseq_scatter.pdf`
 
 5. **05_geneplot**  
-   - *Data*: OBC gene cluster annotations with gene category (Fig. 2C).  
+   - *Data*: OBC gene cluster annotations with gene category (Fig. 3C).  
    - *Script*: `scripts/05_geneplot.R`  
    - *Figure*: `figures/05_geneplot.pdf`
 
 6. **06_plant_infections**  
-   - *Data*: luciferase infection assays (fold-change at 7 dpi, Fig. 3C).  
+   - *Data*: luciferase infection assays (fold-change at 7 dpi, Fig. 4C).  
    - *Script*: `scripts/06_plant_infections_luciferase.R`  
    - *Figure*: `figures/06_plant_infections_luciferase.pdf`
 
 7. **07_plant_disease**  
-   - *Data*: qualitative disease scoring (Fig. 3D).  
+   - *Data*: qualitative disease scoring (Fig. 4D).  
    - *Script*: `scripts/07_plant_disease.R`  
    - *Figure*: `figures/07_plant_disease.pdf`
 
 8. **08_disease_vs_load**  
-   - *Data*: merged infection load and disease scoring data (Fig. 3E).  
+   - *Data*: merged infection load and disease scoring data (Fig. 4E).  
    - *Script*: `scripts/08_disease_vs_load.R`  
    - *Figure*: `figures/08_disease_vs_load.pdf`
 
@@ -62,7 +68,7 @@ Each analysis is organized by figure panel, numbered according to the manuscript
    - *Outputs*: per-replicate WT MICs (`WT_MIC_by_replicate.csv`) and strain contrasts (`emmeans_contrasts_vsWT_scaledMIC.csv`).
 
 10. **10_aggregation**  
-    - *Data*: aggregation phenotype scoring from static cultures (R1–R3, Fig. SX).  
+    - *Data*: aggregation phenotype scoring from static cultures (Fig. SX).  
     - *Script*: `scripts/10_aggregation.R`  
     - *Figure*: `figures/10_aggregation.png`  
     - *Outputs*: χ² and pairwise Fisher’s exact test results (`10_aggregation_stats.csv`).

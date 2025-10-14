@@ -13,6 +13,12 @@ Scripts are numbered to match the figure panels in the paper. Each script reads 
 
 - `03_plant_health_OBC.R`  
   Compare mean green pixels (plant health) between OBC groups.
+  
+- `04_tnseq_plant.R`  
+  Process raw in planta TnSeq read counts from *Pseudomonas syringae* p25C2 grown in Col-0 and Eyach 1.5-2 ecotypes.  
+  Performs DESeq2 differential abundance analysis, filters low-read samples, maps DC3000 orthologs to p25C2,  
+  and merges host fitness results with tailocin TnSeq data to produce a unified dataset for downstream trade-off analyses.  
+  Output: `merged_tnseq.csv` in `data/04_tnseq_scatter/output/`.
 
 - `04_tnseq_scatter.R`  
   Visualize TnSeq-derived plant fitness as a scatterplot.
