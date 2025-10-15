@@ -50,3 +50,8 @@ Scripts are numbered to match the figure panels in the paper. Each script reads 
 - `11_qPCR.R` *(to be added)*  
   Planned analysis of differential expression of Arabidopsis immune marker genes following infection with WT and O-antigen mutants.  
   Will include normalization to reference genes and ΔΔCt-based fold-change comparisons between treatments.
+  
+- `12_invitro_growth.R`
+  Analyze in vitro growth curves of wild-type and O-antigen mutants grown overnight at an initial OD₆₀₀ = 0.01.
+  Fits growth parameters using Growthcurver, exports rate (r), carrying capacity (k), and AUC values, and performs statistical comparisons (Tukey, Games–Howell, or Dunn tests) between mutants and WT.
+  Outputs: growthcurveR_data.csv, growthcurve_stats.csv, and 12_growthcurves.pdf.

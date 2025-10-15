@@ -30,10 +30,13 @@ Each file corresponds to a panel or subpanel in the manuscript. File names are n
   Correlation between bacterial load (luminescence) and plant health (proportion healthy) (Fig. 4E).
 
 - `09_oxidative_stress.pdf`  
-  Growth responses of WT and OPS mutants across H2O2 gradients (Fig. SX).
+  Growth responses of WT and OPS mutants across H2O2 gradients (Fig. S11).
 
 - `10_aggregation.pdf`  
-  Proportion of wells exhibiting aggregation across strains (Fig. SX).
+  Proportion of wells exhibiting aggregation across strains (Fig. S9).
 
 - `11_qPCR.pdf` *(placeholder)*  
-  Planned figure showing differential expression of Arabidopsis immune marker genes following infection with WT vs O-antigen mutants (Fig. SX).
+  Planned figure showing differential expression of Arabidopsis immune marker genes following infection with WT vs O-antigen mutants (Fig. S12).
+  
+- `12_invitro_growth.pdf`
+  In vitro growth curves of wild-type and O-antigen mutants grown overnight at an initial OD₆₀₀ = 0.01, showing mean absorbance trajectories with standard error ribbons (Fig. S8).

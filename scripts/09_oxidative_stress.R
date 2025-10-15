@@ -243,17 +243,21 @@ emm_plot <- emm_means %>%
     upper_bt = if (UCLm_col %in% names(.)) .data[[UCLm_col]] else NA_real_
   )
 
+# order strains for plotting
+emm_plot$strain <- factor(emm_plot$strain,
+  levels = c("epsE", "rmlC", "spsA", "tagG", "tagH", "wfgD", "WT"))
+# plot
 p <- ggplot(emm_plot, aes(x = H2O2_scaled, y = mean_bt, color = strain, group = strain)) +
   geom_point(size = 2) +
   geom_errorbar(aes(ymin = lower_bt, ymax = upper_bt), width = 0.03) +
   geom_line(linewidth = 1) +
   geom_vline(xintercept = 1, linetype = 3) +
-  scale_color_viridis_d(option = "D", end = 0.9) +
+  scale_color_viridis_d(option = "D") +
   theme_bw(base_size = 16) +
   labs(
     x = "Scaled dose (H2O2 / WT MIC)",
     y = "AUC (rel. 0 mM; emmeans, response scale)",
-    title = "Strain responses after per-plate WT MIC scaling"
-  )
+    title = "Strain responses after per-plate WT MIC scaling")
+p
 
 ggsave(file.path(out_fig, "09_oxidative_stress.pdf"), p, width = 9, height = 6, dpi = 300)

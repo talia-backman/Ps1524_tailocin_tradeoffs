@@ -62,22 +62,30 @@ Each analysis is organized by figure panel, numbered according to the manuscript
    - *Figure*: `figures/08_disease_vs_load.pdf`
 
 9. **09_oxidative_stress**  
-   - *Data*: growth curves of WT and OPS mutants across H₂O₂ concentrations (Fig. SX).  
+   - *Data*: growth curves of WT and OPS mutants across H₂O₂ concentrations (Fig. S11).  
    - *Script*: `scripts/09_oxidative_stress.R`  
    - *Figure*: `figures/09_oxidative_stress.png`  
    - *Outputs*: per-replicate WT MICs (`WT_MIC_by_replicate.csv`) and strain contrasts (`emmeans_contrasts_vsWT_scaledMIC.csv`).
 
 10. **10_aggregation**  
-    - *Data*: aggregation phenotype scoring from static cultures (Fig. SX).  
+    - *Data*: aggregation phenotype scoring from static cultures (Fig. S9).  
     - *Script*: `scripts/10_aggregation.R`  
     - *Figure*: `figures/10_aggregation.png`  
     - *Outputs*: χ² and pairwise Fisher’s exact test results (`10_aggregation_stats.csv`).
 
 11. **11_qPCR**  
-    - *Data*: expression levels of immune marker genes in Arabidopsis following infection with WT and O-antigen mutants (Fig. SX).  
+    - *Data*: expression levels of immune marker genes in Arabidopsis following infection with WT and O-antigen mutants (Fig. S12).  
     - *Script*: `scripts/11_qPCR.R` *(to be added)*  
     - *Figure*: `figures/11_qPCR.pdf` *(to be generated)*  
     - *Goal*: test whether O-antigen mutants elicit differential host immune responses compared to WT.
+    
+12. **12_invitro_growth**  
+    - *Data*: in vitro optical density (OD600) growth curves of wild-type and O-antigen mutants grown overnight at an initial OD of 0.01 (Fig. S8).  
+    - *Script*: `scripts/12_invitro_growth.R`  
+    - *Figure*: `figures/12_growthcurves.pdf`  
+    - *Outputs*: Growthcurver-derived parameter table (`growthcurveR_data.csv`) and statistical results comparing mutants to WT (`growthcurve_stats.csv`).  
+    - *Purpose*: fit logistic growth models to estimate doubling times, growth rates, and carrying capacities, and test for differences between strains using parametric or nonparametric post hoc tests depending on data assumptions.
+
 
 ## Requirements
 
