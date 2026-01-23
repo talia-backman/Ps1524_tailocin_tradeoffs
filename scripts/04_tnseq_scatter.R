@@ -81,9 +81,7 @@ p3 <- ggplot(dat2, aes(x = log2FoldChange_eyach1025, y = logFC_tailocin)) +
   scale_alpha_manual(values = c("Significant" = 1, "Not Significant" = 0.2), name = "Significance") +
   xlab("log Fold Change Eyach") +
   ylab("log Fold Change Tailocin") +
-  theme_minimal() +
-  geom_text_repel(data = dat2_annotate, aes(label = gene_or_product),
-                  size = 2, box.padding = 0.1)
+  theme_minimal() #+ geom_text_repel(data = dat2_annotate, aes(label = gene_or_product), size = 2, box.padding = 0.1)
 p3
 # save
 ggsave("./figures/04_tnseq_scatter.pdf", p3, width = 8, height = 4, dpi = 300)

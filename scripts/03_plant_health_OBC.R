@@ -42,6 +42,7 @@ y_bar <- max(obc_dat$mean_pixel, na.rm = TRUE) * 1.05
 y_text <- y_bar * 1.01
 
 set.seed(1)
+# plot with standard error bars
 p <- ggplot(obc_dat, aes(x = reorder(OBC_presence, mean_pixel, FUN = mean),
                          y = mean_pixel, fill = OBC_presence)) +
   stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.75) +
@@ -56,8 +57,26 @@ p <- ggplot(obc_dat, aes(x = reorder(OBC_presence, mean_pixel, FUN = mean),
   geom_segment(aes(x = 1, xend = 2, y = y_bar, yend = y_bar)) +
   annotate("text", x = 1.5, y = y_text, label = expression(bold("**")), size = 6)
 
-p
-ggsave("./figures/03_plant_health_OBC.pdf", p, width = 8, height = 6)
+# plot with confidence intervals
+p1 <- ggplot(obc_dat, aes(x = reorder(OBC_presence, mean_pixel, FUN = mean),
+                          y = mean_pixel, fill = OBC_presence)) +
+  stat_summary(fun.data = function(x) {
+    data.frame(
+      y    = mean(x),
+      ymin = mean(x) - 1.96 * sd(x) / sqrt(length(x)),
+      ymax = mean(x) + 1.96 * sd(x) / sqrt(length(x))
+    )
+  }, geom = "errorbar", width = 0.75) +
+  stat_summary(fun = mean, geom = "point", size = 4) +
+  geom_jitter(aes(colour = OBC_presence), width = 0.05, height = 0) +
+  scale_fill_viridis_d(option = "D") +
+  scale_color_viridis_d(option = "D") +
+  theme_bw() +
+  theme(text = element_text(size = 15), legend.position = "none") +
+  xlab("OBC Presence") + 
+  ylab("Mean green pixels")
+p1
+ggsave("./figures/03_plant_health_OBC_CIs.pdf", p1, width = 8, height = 6)
 
 # stats (Wilcoxon rank-sum, robust & consistent with prior script) 
 w <- wilcox.test(mean_pixel ~ OBC_presence, data = obc_dat, exact = FALSE)

@@ -47,11 +47,21 @@ Scripts are numbered to match the figure panels in the paper. Each script reads 
   and Fisher’s exact tests vs WT with FDR correction.  
   Outputs: `10_aggregation_stats.csv` and `10_aggregation.png`.
 
-- `11_qPCR.R` *(to be added)*  
-  Planned analysis of differential expression of Arabidopsis immune marker genes following infection with WT and O-antigen mutants.  
-  Will include normalization to reference genes and ΔΔCt-based fold-change comparisons between treatments.
+- `11_qPCR.R` 
+  - `11a_qPCR_processing_example.R`: Example script demonstrating per-plate qPCR processing from raw fluorescence (RFU) data.
+    Includes baseline correction, per-well efficiency estimation, quality control of technical replicates, exclusion of failed wells, reference-gene normalization, and calculation of MNE fold-change values.
+    Serves as a template for processing all individual qPCR plates prior to synthesis.
+  - `11b_qPCR.R`
+    Aggregate analysis of synthesized qPCR expression data across experiments.
+    Summarizes MNE-normalized fold-change values across biological replicates, generates time-course and treatment-specific visualizations, and performs adaptive statistical testing (ANOVA/Tukey, Welch/Games–Howell, or Kruskal–Wallis/Dunn) for each gene and timepoint.
+    Outputs: `SynthesisMNE_summary.csv` and `11_qPCR.pdf`.
   
 - `12_invitro_growth.R`
   Analyze in vitro growth curves of wild-type and O-antigen mutants grown overnight at an initial OD₆₀₀ = 0.01.
   Fits growth parameters using Growthcurver, exports rate (r), carrying capacity (k), and AUC values, and performs statistical comparisons (Tukey, Games–Howell, or Dunn tests) between mutants and WT.
-  Outputs: growthcurveR_data.csv, growthcurve_stats.csv, and 12_growthcurves.pdf.
+  Outputs: `growthcurveR_data.csv`, `growthcurve_stats.csv`, and `12_growthcurves.pdf`.
+
+- `13_plant_CFUs.R`
+  Analyze in planta bacterial growth measured as CFU per leaf following infection with WT and O-antigen mutants.
+  Generates ecotype- and timepoint-specific boxplots, applies adaptive statistical testing (t-test, Welch t-test, or Wilcoxon rank-sum) to compare WT vs mutant across inoculum concentrations, and exports a unified results table.
+  Outputs: `13_plant_CFUs.pdf` and `13_CFU_stats.csv`.

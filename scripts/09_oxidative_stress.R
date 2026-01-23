@@ -188,8 +188,69 @@ wt_mic <- wt_mic %>%
   mutate(MIC_WT = ifelse(is.na(MIC_WT), maxC, MIC_WT)) %>%
   select(-maxC)
 
-# Save MICs (reported in Results)
+# Save MICs 
 write_csv(wt_mic, file.path(out_dir, "WT_MIC_by_replicate.csv"))
+
+# ------------------ per-strain MICs (using same interpolation) ------------------
+# Estimate MIC for each strain in each replicate
+mic_by_strain_rep <- auc_norm %>%
+  group_by(replicate, strain, H2O2conc) %>%
+  summarise(AUC_rel0 = mean(AUC_rel0, na.rm = TRUE), .groups = "drop") %>%
+  arrange(replicate, strain, H2O2conc) %>%
+  group_by(replicate, strain) %>%
+  group_modify(~ tibble(MIC = estimate_mic_interp(.x))) %>%
+  ungroup()
+
+# Join WT MICs per replicate so we can express strain MICs relative to WT
+mic_by_strain_rep <- mic_by_strain_rep %>%
+  left_join(wt_mic, by = "replicate") %>%
+  rename(MIC_WT = MIC_WT) %>%
+  mutate(MIC_relWT = MIC / MIC_WT)
+
+# Summarize MIC mean, SD, and MIC/WT per strain
+mic_summary <- mic_by_strain_rep %>%
+  group_by(strain) %>%
+  summarise(
+    mic_mean   = mean(MIC, na.rm = TRUE),
+    mic_sd     = sd(MIC, na.rm = TRUE),
+    MIC_WT_est = mean(MIC_relWT, na.rm = TRUE),
+    .groups    = "drop"
+  )
+
+# Get p-values: paired t-test of MIC_mutant vs MIC_WT across replicates
+pvals <- mic_by_strain_rep %>%
+  filter(strain != "WT") %>%
+  group_by(strain) %>%
+  summarise(
+    p_value = {
+      x <- MIC
+      y <- MIC_WT
+      if (all(is.na(x)) || all(is.na(y))) NA_real_
+      else t.test(x, y, paired = TRUE)$p.value
+    },
+    .groups = "drop"
+  )
+
+mic_table <- mic_summary %>%
+  left_join(pvals, by = "strain") %>%
+  mutate(
+    Strain = dplyr::case_when(
+      strain == "WT" ~ "WT",
+      TRUE           ~ as.character(strain)
+    ),
+    `MIC (mM, mean ± SD)` = sprintf("%.1f ± %.1f", mic_mean, mic_sd),
+    `MIC/WT (est.)`       = sprintf("%.2f", MIC_WT_est),
+    `p-value`             = dplyr::case_when(
+      strain == "WT"        ~ "–",
+      is.na(p_value)        ~ NA_character_,
+      TRUE                  ~ sprintf("%.2f", p_value)
+    )
+  ) %>%
+  select(Strain, `MIC (mM, mean ± SD)`, `MIC/WT (est.)`, `p-value`)
+
+# Save MIC summary table for manuscript
+write_csv(mic_table, file.path(out_dir, "MIC_table.csv"))
+
 
 auc_scaled <- auc_norm %>%
   left_join(wt_mic, by = "replicate") %>%

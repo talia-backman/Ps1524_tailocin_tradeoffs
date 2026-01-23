@@ -16,17 +16,17 @@ This repository contains data, analysis scripts, and figures for the manuscript
 Each analysis is organized by figure panel, numbered according to the manuscript:
 
 1. **01_tailocin_killing_matrix**  
-   - *Data*: killing matrix assays and tree (Fig. 2A).  
+   - *Data*: killing matrix assays and tree (Fig. 1A).  
    - *Script*: `scripts/01_tailocin_killing_matrix.R`  
    - *Figure*: `figures/01_tailocin_killing_matrix.pdf`
 
 2. **02_HTF_OBC_sensitivity_summary**  
-   - *Data*: strain haplotypes and sensitivity assays (Fig. 2B).  
+   - *Data*: strain haplotypes and sensitivity assays (Fig. 1B).  
    - *Script*: `scripts/02_HTF_OBC_sensitivity_summary.R`  
    - *Figure*: `figures/02_HTF_OBC_sensitivity_summary.pdf`
 
 3. **03_plant_health_OBC**  
-   - *Data*: green pixel quantification and OBC annotations (Fig. 2C).  
+   - *Data*: green pixel quantification and OBC annotations (Fig. 1C).  
    - *Script*: `scripts/03_plant_health_OBC.R`  
    - *Figure*: `figures/03_plant_health_OBC.pdf`
 
@@ -37,55 +37,61 @@ Each analysis is organized by figure panel, numbered according to the manuscript
    - *Purpose*: perform DESeq2 analysis of host-associated fitness, cross-map orthologs between p25C2 and DC3000, and merge with tailocin TnSeq results for downstream trade-off analyses.
 
    **04_tnseq_scatter**  
-   - *Data*: plant vs tailocin fitness from parallel TnSeq (Fig. 3B).  
+   - *Data*: plant vs tailocin fitness from parallel TnSeq (Fig. 2B).  
    - *Script*: `scripts/04_tnseq_scatter.R`  
    - *Figure*: `figures/04_tnseq_scatter.pdf`
 
 5. **05_geneplot**  
-   - *Data*: OBC gene cluster annotations with gene category (Fig. 3C).  
+   - *Data*: OBC gene cluster annotations with gene category (Fig. 2C).  
    - *Script*: `scripts/05_geneplot.R`  
    - *Figure*: `figures/05_geneplot.pdf`
 
 6. **06_plant_infections**  
-   - *Data*: luciferase infection assays (fold-change at 7 dpi, Fig. 4C).  
+   - *Data*: luciferase infection assays (fold-change at 7 dpi, Fig. 3C).  
    - *Script*: `scripts/06_plant_infections_luciferase.R`  
    - *Figure*: `figures/06_plant_infections_luciferase.pdf`
 
 7. **07_plant_disease**  
-   - *Data*: qualitative disease scoring (Fig. 4D).  
+   - *Data*: qualitative disease scoring (Fig. S2).  
    - *Script*: `scripts/07_plant_disease.R`  
    - *Figure*: `figures/07_plant_disease.pdf`
 
 8. **08_disease_vs_load**  
-   - *Data*: merged infection load and disease scoring data (Fig. 4E).  
+   - *Data*: merged infection load and disease scoring data (Fig. S3).  
    - *Script*: `scripts/08_disease_vs_load.R`  
    - *Figure*: `figures/08_disease_vs_load.pdf`
 
 9. **09_oxidative_stress**  
-   - *Data*: growth curves of WT and OPS mutants across H₂O₂ concentrations (Fig. S11).  
+   - *Data*: strain responses of WT and OPS mutants across H₂O₂ concentrations (Fig. S7).  
    - *Script*: `scripts/09_oxidative_stress.R`  
    - *Figure*: `figures/09_oxidative_stress.png`  
    - *Outputs*: per-replicate WT MICs (`WT_MIC_by_replicate.csv`) and strain contrasts (`emmeans_contrasts_vsWT_scaledMIC.csv`).
 
 10. **10_aggregation**  
-    - *Data*: aggregation phenotype scoring from static cultures (Fig. S9).  
+    - *Data*: aggregation phenotype scoring from static cultures (Fig. S5).  
     - *Script*: `scripts/10_aggregation.R`  
     - *Figure*: `figures/10_aggregation.png`  
     - *Outputs*: χ² and pairwise Fisher’s exact test results (`10_aggregation_stats.csv`).
 
 11. **11_qPCR**  
-    - *Data*: expression levels of immune marker genes in Arabidopsis following infection with WT and O-antigen mutants (Fig. S12).  
-    - *Script*: `scripts/11_qPCR.R` *(to be added)*  
-    - *Figure*: `figures/11_qPCR.pdf` *(to be generated)*  
+    - *Data*: qPCR-based expression measurements of Arabidopsis thaliana immune marker genes following infection with WT and O-antigen mutants across treatments and timepoints (Fig. S8).  
+    - *Script*: `scripts/11a_qPCR_processing_example.R`, `scripts/11b_qPCR.R`
+    - *Figure*: `11a_plots_mne_mock_timepoint.pdf`,	`11a_plots_mne_time0_treatment.pdf`, `11b_qPCR_targets_x_paper.pdf`,	`11b_qPCR_time0_treatment_all_data.pdf`, `11b_qPCR_mock_timepoints_all_data.pdf`
     - *Goal*: test whether O-antigen mutants elicit differential host immune responses compared to WT.
     
 12. **12_invitro_growth**  
-    - *Data*: in vitro optical density (OD600) growth curves of wild-type and O-antigen mutants grown overnight at an initial OD of 0.01 (Fig. S8).  
+    - *Data*: in vitro optical density (OD600) growth curves of wild-type and O-antigen mutants grown overnight at an initial OD of 0.01 (Fig. S4).  
     - *Script*: `scripts/12_invitro_growth.R`  
     - *Figure*: `figures/12_growthcurves.pdf`  
     - *Outputs*: Growthcurver-derived parameter table (`growthcurveR_data.csv`) and statistical results comparing mutants to WT (`growthcurve_stats.csv`).  
     - *Purpose*: fit logistic growth models to estimate doubling times, growth rates, and carrying capacities, and test for differences between strains using parametric or nonparametric post hoc tests depending on data assumptions.
 
+13. **13_plant_CFUs**
+    -*Data*: colony-forming unit (CFU) counts from Arabidopsis thaliana leaves infected with WT and O-antigen mutant strains across ecotypes (Col-0, Eyach 1.5–2), timepoints (2 dpi, 5 dpi), and inoculum concentrations (Fig. S5).
+    -*Script*: `scripts/13_plant_CFUs.R`
+    -*Figure*: `figures/13_plant_CFUs.pdf`
+    -*Outputs*: statistical comparison table of WT vs mutant CFU loads across concentrations, ecotypes, and timepoints (`13_CFU_stats.csv`).
+    -*Purpose*: quantify in planta bacterial growth across host backgrounds and infection doses, visualize CFU distributions, and test for differences between WT and O-antigen mutants using adaptive parametric or nonparametric tests.
 
 ## Requirements
 

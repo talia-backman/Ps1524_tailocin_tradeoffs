@@ -90,7 +90,7 @@ merged_long <- merged %>%
     OBC = factor(OBC, levels = c("OBC Absent", "OBC Present"))
   )
 
-# plot by OBC presence/absence
+# plot by OBC presence/absence with standard error
 p <- ggplot(merged_long, aes(x = reorder(OBC, Percent, mean), y = Percent, fill = OBC)) +
   stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.75) +
   stat_summary(fun = mean, geom = "point", size = 4) +
@@ -104,8 +104,26 @@ p <- ggplot(merged_long, aes(x = reorder(OBC, Percent, mean), y = Percent, fill 
   xlab("OBC Presence") +
   ylab("Percent of strains")
 
+# plot with confidence intervals
+p <- ggplot(merged_long, aes(x = reorder(OBC, Percent, mean), y = Percent, fill = OBC)) +
+  stat_summary(fun.data = function(x) {
+    data.frame(y = mean(x),
+               ymin = mean(x) - 1.96 * sd(x)/sqrt(length(x)),
+               ymax = mean(x) + 1.96 * sd(x)/sqrt(length(x)))
+  }, geom = "errorbar", width = 0.75) +
+  stat_summary(fun = mean, geom = "point", size = 4) +
+  geom_jitter(aes(colour = OBC), width = 0.05, height = 0) +
+  scale_fill_viridis_d(option = "D") +
+  scale_color_viridis_d(option = "D") +
+  theme_bw() +
+  theme(text = element_text(size = 20), legend.position = "none") +
+  scale_x_discrete(guide = guide_axis(angle = 90)) +
+  facet_wrap(~ Phenotype) +
+  xlab("OBC Presence") +
+  ylab("Percent of strains")
+
 p
-ggsave("./figures/02_HTF_OBC_sensitivity_summary.pdf", p, width = 8, height = 6)
+ggsave("./figures/02_HTF_OBC_sensitivity_summary_CIs.pdf", p, width = 8, height = 6)
 
 # stats: compare OBC groups for each phenotype (non-parametric is fine/robust)
 percent_R_data <- merged_long %>% filter(Phenotype == "percent_R")

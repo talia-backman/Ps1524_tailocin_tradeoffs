@@ -6,37 +6,40 @@ Each file corresponds to a panel or subpanel in the manuscript. File names are n
 ## Contents
 
 - `01_tailocin_killing_matrix.pdf`  
-  Killing matrix heatmap with phylogenetic tree and HTF-length annotations (Fig. 2A).
+  Killing matrix heatmap with phylogenetic tree and HTF-length annotations (Fig. 1A).
 
 - `02_HTF_OBC_sensitivity_summary.pdf`  
-  Sensitivity/resistance proportions summarized by OBC presence/absence (Fig. 2B).
+  Sensitivity/resistance proportions summarized by OBC presence/absence (Fig. 1B).
 
 - `03_plant_health_OBC.pdf`  
-  Green pixel quantification (plant health) compared between OBC-present and OBC-absent strains (Fig. 2C).
+  Green pixel quantification (plant health) compared between OBC-present and OBC-absent strains (Fig. 1C).
 
 - `04_tnseq_scatter.pdf`  
-  Scatterplot of TnSeq-derived plant fitness phenotypes (Fig. 3B).
+  Scatterplot of TnSeq-derived plant fitness phenotypes (Fig. 2B).
 
 - `05_geneplot.pdf`  
-  Gene map of the focal OBC cluster, colored by TnSeq results (Fig.3C).
+  Gene map of the focal OBC cluster, colored by TnSeq results (Fig.2C).
 
 - `06_plant_infections_luciferase.pdf`  
-  Fold-change in bacterial luminescence at 7 dpi across strains and ecotypes (Fig. 4C).
+  Fold-change in bacterial luminescence at 7 dpi across strains and ecotypes (Fig. 3C).
 
 - `07_plant_disease.pdf`  
-  Stacked bar plots of plant outcomes (healthy vs diseased/dead) per strain and ecotype (Fig. 4D).
+  Stacked bar plots of plant outcomes (healthy vs diseased/dead) per strain and ecotype (Fig. S2).
 
 - `08_disease_vs_load.pdf`  
-  Correlation between bacterial load (luminescence) and plant health (proportion healthy) (Fig. 4E).
+  Correlation between bacterial load (luminescence) and plant health (proportion healthy) (Fig. S3).
 
 - `09_oxidative_stress.pdf`  
-  Growth responses of WT and OPS mutants across H2O2 gradients (Fig. S11).
+  Growth responses of WT and OPS mutants across H2O2 gradients (Fig. S7).
 
 - `10_aggregation.pdf`  
-  Proportion of wells exhibiting aggregation across strains (Fig. S9).
+  Proportion of wells exhibiting aggregation across strains (Fig. S5).
 
-- `11_qPCR.pdf` *(placeholder)*  
-  Planned figure showing differential expression of Arabidopsis immune marker genes following infection with WT vs O-antigen mutants (Fig. S12).
+- `11_qPCR.pdf` 
+  Expression dynamics of Arabidopsis immune marker genes following infection with WT and O-antigen mutants, shown as MNE-normalized fold change across treatments and timepoints, with gene-specific panels and standard error bars (Fig. S8).
   
 - `12_invitro_growth.pdf`
-  In vitro growth curves of wild-type and O-antigen mutants grown overnight at an initial OD₆₀₀ = 0.01, showing mean absorbance trajectories with standard error ribbons (Fig. S8).
+  In vitro growth curves of wild-type and O-antigen mutants grown overnight at an initial OD₆₀₀ = 0.01, showing mean absorbance trajectories with standard error ribbons (Fig. S4).
+  
+- `13_plant_CFUs.pdf`
+  Boxplots of log₁₀(CFU/leaf) for WT and O-antigen mutant infections across ecotypes (Col-0, Eyach 1.5–2), timepoints (2 dpi, 5 dpi), and inoculum concentrations, with individual data points overlaid (Fig. S5).
