@@ -1,0 +1,30 @@
+============================================================
+ Plant health (mean green pixels) by OBC group
+============================================================
+
+Input files:
+ - ./data/input/plant_health_OBC_mean_pixels.csv
+ - ./data/input/plant_health_OBC_presence.csv
+
+Total rows after merge (before filtering): 93
+Total rows after filtering (non-NA OBC + non-NA mean_pixel): 93
+
+Group summary:
+# A tibble: 2 × 5
+  OBC_presence     N strains                                                        mean_mean_pixel se_mean_pixel
+  <fct>        <int> <chr>                                                                    <dbl>         <dbl>
+1 Absent          27 p1.C5, p1.E6, p1.G2, p13.F5, p20.B8, p22.C1, p22.E7, p23.A2, …          45092.         4306.
+2 Present         66 p1.A2, p1.A3, p1.D11, p1.D2, p1.E3, p1.F8, p1.G5, p1.H1, p13.…          14371.         2082.
+
+
+Wilcoxon rank-sum test:
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mean_pixel by OBC_presence
+W = 1539, p-value = 4.243e-08
+alternative hypothesis: true location shift is not equal to 0
+
+
+
+Timestamp: 2026-02-03 10:51:28.619317

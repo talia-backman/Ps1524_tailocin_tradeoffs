@@ -1,0 +1,43 @@
+============================================
+ OBC Tailocin Sensitivity Summary
+============================================
+
+Inputs:
+ - ./data/input/tailocin_killing_long.csv
+ - ./data/input/HTF_length_haplotype.csv
+
+Filtering:
+ - Kept donor replicates with Total > 5 tester outcomes
+ - Dropped rows lacking OBC annotation
+
+Group sample counts (each row = one donor replicate column):
+# A tibble: 2 × 3
+  OBC       N donor_replicates                                                 
+  <fct> <int> <chr>                                                            
+1 OBC-      6 p1.G2_R1, p23.B2_R1, p25.A12_R1, p25.A12_R2, p7.G11_R2, p7.G11_R1
+2 OBC+      6 p21.F9_R1, p21.F9_R2, p23.B8_R1, p23.B8_R2, p5.C3_R1, p5.C3_R2   
+
+
+Wilcoxon test — Percent Sensitive (percent_S):
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  percent_S by OBC
+W = 36, p-value = 0.004998
+alternative hypothesis: true location shift is not equal to 0
+
+
+Significance: **
+
+Wilcoxon test — Percent Resistant (percent_R):
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  percent_R by OBC
+W = 0, p-value = 0.004998
+alternative hypothesis: true location shift is not equal to 0
+
+
+Significance: **
+
+Timestamp: 2026-02-03 10:59:47.679829

@@ -4,10 +4,10 @@
 #   Plot the focal OBC cluster gene map, colored by TnSeq results (Category).
 #
 # Input:
-#   - data/05_geneplot/p25C2_tnseq_geneplot.csv
+#   - data/input/geneplot_p25C2_tnseq.csv
 #
 # Output:
-#   - figures/05_geneplot.pdf
+#   - figures/geneplot.pdf
 #
 # Dependencies:
 #   dplyr, ggplot2, viridis
@@ -24,7 +24,7 @@ c25 <- c("black","grey70","#73D055FF")
 
 # read gene plot data (a csv file with the following headers:
 # molecule gene start end strand direction)
-dat <- read.table("./data/05_geneplot/p25C2_tnseq_geneplot.csv", header = TRUE, sep=",")
+dat <- read.table("./data/input/geneplot_p25C2_tnseq.csv", header = TRUE, sep=",")
 
 # plot 
 p <- ggplot(dat, aes(xmin = start, xmax = end, y = molecule, fill = Category)) +
@@ -43,4 +43,4 @@ p <- ggplot(dat, aes(xmin = start, xmax = end, y = molecule, fill = Category)) +
 p
 
 # save plot
-ggsave("./figures/05_geneplot.png", p, width = 8, height = 6)
+ggsave("./figures/geneplot.png", p, width = 8, height = 6)

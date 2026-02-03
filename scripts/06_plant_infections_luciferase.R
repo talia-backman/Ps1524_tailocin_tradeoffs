@@ -5,10 +5,10 @@
 #   Mixed-effects/saturated models per ecotype; pairwise vs WT with FDR correction.
 #
 # Input:
-#   - data/06_plant_infections/luciferase_7dpi.csv
+#   - data/input/plant_infections_luciferase_7dpi.csv
 #
 # Output:
-#   - figures/06_plant_infections_luciferase.pdf
+#   - figures/plant_infections_luciferase.pdf
 #   - Console output: model summaries, ANOVA, emmeans contrasts vs WT (FDR)
 #
 # Dependencies:
@@ -26,7 +26,7 @@ library(dplyr)
 library(lme4)
 
 # read in data
-dat <- read.csv("./data/06_plant_infections/luciferase_7dpi.csv")
+dat <- read.csv("./data/input/plant_infections_luciferase_7dpi.csv")
 # remove rows with NAs
 dat <- dat[!(is.na(dat$ecotype) | dat$ecotype==""), ]
 # remove buffer because it's inflated due to low initial lux values of plain buffer
@@ -75,7 +75,7 @@ col0$strain  <- relevel(col0$strain,  ref = "WT")
 eyach$strain <- relevel(eyach$strain, ref = "WT")
 
 # do statistics
-# ----- Col-0 -----
+# Col-0 
 if ("batch" %in% names(col0)) {
   model_col0 <- lmer(fold_change_7dpi ~ strain + (1 | batch), data = col0)
 } else {
@@ -153,4 +153,4 @@ p <- ggplot(dat, aes(x = strain_ord, y = fold_change_7dpi, fill = strain_ord, co
             color = "black", size = 5) + theme(legend.position = "none")
 p
 # save plot
-ggsave("./figures/06_plant_infections_luciferase.pdf", p, height = 5,width = 8)
+ggsave("./figures/plant_infections_luciferase.pdf", p, height = 5,width = 8)

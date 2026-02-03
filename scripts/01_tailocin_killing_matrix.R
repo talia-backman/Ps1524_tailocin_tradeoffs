@@ -5,12 +5,13 @@
 #   Adds tip labels colored by HTF length haplotype and a heatmap showing killing outcomes.
 #
 # Input:
-#   - data/01_tailocin_killing_matrix/tailocin_killing_matrix.csv
-#   - data/01_tailocin_killing_matrix/HTF_length_haplotype.csv
-#   - data/01_tailocin_killing_matrix/ps_1524_uncollapsed_5_2018.nwk
+#   - data/input/tailocin_killing_matrix.csv
+#   - data/input/HTF_length_haplotype.csv
+#   - data/input/ps_1524_uncollapsed_5_2018.nwk
 #
 # Output:
-#   - figures/01_tailocin_killing_matrix.pdf
+#   - figures/tailocin_killing_matrix.pdf
+#   - data/output/tailocin_killing_long.csv
 #
 # Dependencies:
 #   ggplot2, ape, ggtree, dplyr, viridis, RColorBrewer
@@ -27,12 +28,12 @@ library(viridis)
 library(RColorBrewer) 
 
 # read in data and prep it for plotting
-dat <- read.csv("./data/01_tailocin_killing_matrix/tailocin_killing_matrix.csv")
-htf_dat <- read.csv("./data/01_tailocin_killing_matrix/HTF_length_haplotype.csv")
+dat <- read.csv("./data/input/tailocin_killing_matrix.csv")
+htf_dat <- read.csv("./data/input/HTF_length_haplotype.csv")
 # merge data
 dat <- merge(dat, htf_dat, by.x = "X", by.y = "strain")
 # read in tree
-tree <- read.tree("./data/01_tailocin_killing_matrix/ps_1524_uncollapsed_5_2018.nwk")
+tree <- read.tree("./data/input/ps_1524_uncollapsed_5_2018.nwk")
 # subset tree to only the tester strains used in dat
 uneeded <- which(!(tree$tip.label %in% dat$X))
 tree <- drop.tip(tree, uneeded)
@@ -74,4 +75,4 @@ p3 <- gheatmap(p, dat_matrix, colnames = TRUE, legend_title = "Results",
 p3
 
 # save figure as pdf
-ggsave("./figures/01_tailocin_killing_matrix.pdf", p3, width = 12, height = 10)
+ggsave("./figures/tailocin_killing_matrix.pdf", p3, width = 12, height = 10)

@@ -6,12 +6,12 @@
 #   explicit OBC calls, runs a Wilcoxon rank-sum test, and generates a boxplot figure.
 #
 # Input:
-#   - data/03_plant_health_OBC/mean_pixels.csv
-#   - data/03_plant_health_OBC/OBC_presence.csv
+#   - data/input/plant_health_OBC_mean_pixels.csv
+#   - data/input/plant_health_OBC_presence.csv
 #
 # Output:
-#   - figures/03_plant_health_OBC.pdf
-#   - data/03_plant_health_OBC/output/03_plant_health_OBC_wilcoxon_summary.txt
+#   - figures/plant_health_OBC.pdf
+#   - data/output/plant_health_OBC_wilcoxon_summary.txt
 #
 # Dependencies:
 #   dplyr, tidyr, ggplot2, viridis
@@ -27,11 +27,11 @@ library(ggplot2)
 library(viridis)
 
 # paths
-in_mean_pixels <- "./data/03_plant_health_OBC/mean_pixels.csv"
-in_obc_calls   <- "./data/03_plant_health_OBC/OBC_presence.csv"
-out_fig   <- "./figures/03_plant_health_OBC.pdf"
-out_dir   <- "./data/03_plant_health_OBC/output"
-out_txt   <- file.path(out_dir, "03_plant_health_OBC_wilcoxon_summary.txt")
+in_mean_pixels <- "./data/input/plant_health_OBC_mean_pixels.csv"
+in_obc_calls   <- "./data/input/plant_health_OBC_presence.csv"
+out_fig   <- "./figures/plant_health_OBC.pdf"
+out_dir   <- "./data/output/"
+out_txt   <- file.path(out_dir, "plant_health_OBC_wilcoxon_summary.txt")
 
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
